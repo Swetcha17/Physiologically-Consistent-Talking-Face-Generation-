@@ -59,12 +59,12 @@ python src/run_pipeline.py --test
 
 ```
 src/
-  generate_video.py      # SadTalker wrapper (Swetcha)
-  face_parsing.py        # BiSeNet skin ROI extraction (Swetcha)
-  inject_rppg.py         # rPPG signal injection (Swetcha)
-  bvp_generator.py       # Synthetic BVP waveform (Ankit)
-  rppg_evaluator.py      # rPPG extraction & metrics (Ankit)
-  run_pipeline.py        # End-to-end pipeline (Swetcha)
+  generate_video.py      # SadTalker wrapper
+  face_parsing.py        # BiSeNet skin ROI extraction
+  inject_rppg.py         # rPPG signal injection
+  bvp_generator.py       # Synthetic BVP waveform
+  rppg_evaluator.py      # rPPG extraction & metrics
+  run_pipeline.py        # End-to-end pipeline
 ```
 
 ## Team
