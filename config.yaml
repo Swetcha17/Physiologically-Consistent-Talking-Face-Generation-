@@ -1,0 +1,53 @@
+# =============================================================================
+# rPPG Talking-Face Project Configuration
+# =============================================================================
+
+sadtalker:
+  repo_path: "./SadTalker"
+  checkpoint_dir: "./SadTalker/checkpoints"
+  enhancer: "gfpgan"
+  preprocess: "crop"
+  still_mode: false
+  output_size: 256
+  expression_scale: 1.0
+  pose_style: 0
+
+video:
+  fps: 25
+  duration: 10
+  output_format: "mp4"
+
+face_parsing:
+  model_path: "./models/face_parsing_79999_iter.pth"
+  # CelebAMask-HQ label map:
+  #  0=bg, 1=skin, 2=l_brow, 3=r_brow, 4=l_eye, 5=r_eye
+  #  6=eye_g, 7=l_ear, 8=r_ear, 9=ear_r, 10=nose
+  #  11=mouth, 12=u_lip, 13=l_lip, 14=neck, 15=necklace
+  #  16=cloth, 17=hair, 18=hat
+  skin_labels: [1, 10, 14]
+  device: "cuda"
+
+injection:
+  target_heart_rate: 72
+  amplitude: 0.015
+  channel: "green"
+  spatial_smoothing: true
+  blur_kernel_size: 15
+
+bvp:
+  heart_rate: 72
+  hrv_std: 0.025
+  respiratory_rate: 15
+  rsa_amplitude: 0.05
+
+evaluation:
+  rppg_method: "POS"
+  window_size: 6
+  metrics: [hr_mae, pearson_r, snr, psd_peak_accuracy]
+  visual_metrics: [ssim, psnr]
+
+paths:
+  source_images: "./data/source_images"
+  audio_files: "./data/audio"
+  output_dir: "./results"
+  models_dir: "./models"

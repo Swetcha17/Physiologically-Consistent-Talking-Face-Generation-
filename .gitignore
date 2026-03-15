@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+
+# Environments
+venv/
+env/
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Large model weights
+models/*.pth
+models/*.pt
+models/*.onnx
+models/*.safetensors
+
+# External repos (cloned locally, not tracked)
+SadTalker/
+face-parsing.PyTorch/
+
+# Data & results (samples tracked, bulk ignored)
+results/*.mp4
+results/*.avi
+results/frames/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+*.log
